@@ -14,3 +14,8 @@ Files: assets/sdg/*
 Copyright: United Nations
 License: LicenseRef-UN-SDG-Guidelines
 Comment: SDG 图标与色轮版权归联合国所有，按联合国《可持续发展目标标识使用指南》用于声明支持，不代表联合国背书。
+
+Files: assets/js/supabase.js
+Copyright: Supabase Inc.
+License: MIT
+Comment: @supabase/supabase-js 2.119.0 的 UMD 构建产物（dist/umd/supabase.js），自托管以避免 CDN 不可用导致页面脚本中断；未修改内容。

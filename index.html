@@ -525,17 +525,30 @@ footer{border-top:4px solid var(--line);padding:26px 0;text-align:center;color:#
 </div>
 
 <div class="toast" id="toast">已复制到剪贴板！</div>
-<script src="https://fastly.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/supabase.js" defer></script>
 <script src="config.js"></script>
 <script>
 /* ---------- 初始化 Supabase ---------- */
 let sb = null;
 function initSupabase(){
+  if (sb) return;
+  if (typeof window.supabase === "undefined") {
+    console.warn("supabase-js 未加载，登录相关功能暂不可用");
+    return;
+  }
   if (SUPABASE_URL && SUPABASE_URL.startsWith("http")) {
     sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    sb.auth.onAuthStateChange(()=>syncSession());
+    syncSession();
   }
 }
 initSupabase();
+/* supabase-js 用 defer 加载，慢网络下不会阻塞页面渲染；等解析完成后再补一次初始化 */
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initSupabase);
+} else {
+  initSupabase();
+}
 
 /* ---------- 公告数据（静态内联，可直接在这里增删） ---------- */
 const ANNOUNCEMENTS = [
@@ -670,7 +683,6 @@ async function syncSession(){
   }
   refreshGated();
 }
-if(sb){ sb.auth.onAuthStateChange(()=>syncSession()); syncSession(); }
 
 /* ---------- 私信 ---------- */
 async function sendMsg(){

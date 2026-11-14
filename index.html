@@ -540,6 +540,8 @@ function initSupabase(){
     sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
     sb.auth.onAuthStateChange(()=>syncSession());
     syncSession();
+    // 客户端就绪后补一次状态读取，避免首屏那句“加载中”一直挂着
+    if (typeof getServerStatus === "function") getServerStatus();
   }
 }
 initSupabase();
@@ -762,7 +764,7 @@ async function submitAdminApplication(){
 
 /* ---------- 服务器状态（读取服务端主动上报，最准） ---------- */
 async function getServerStatus(){
-  if(!sb){ document.getElementById('home-status-text').textContent='未配置 Supabase'; return; }
+  if(!sb){ document.getElementById('home-status-text').textContent='状态加载中…'; return; }
   try{
     const {data:d}=await sb.from('server_status').select('*').eq('id',1).maybeSingle();
     // 上报时间超过 3 分钟视为数据陈旧，按离线处理

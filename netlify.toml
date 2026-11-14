@@ -1,0 +1,30 @@
+# Netlify 配置（全规则服务器官网）
+
+# 把 /sb/* 路由到反向代理 Edge Function（netlify/edge-functions/sb.js）
+[[edge_functions]]
+  function = "sb"
+  path = "/sb/*"
+
+# 启动器下载保护：/downloads/* 先经过 protect-download 校验登录，未登录直接 403
+[[edge_functions]]
+  function = "protect-download"
+  path = "/downloads/*"
+
+# 图片等静态资源长期缓存
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# 启动器下载：保留较短缓存，方便以后更新本体
+[[headers]]
+  for = "/downloads/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+
+# 基础安全响应头
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

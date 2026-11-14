@@ -1,0 +1,60 @@
+# 全规则服务器官网 robots.txt
+# 策略：默认放行（保证平台审核与搜索引擎正常收录），仅拉黑高消耗的 AI 训练爬虫
+
+# 明确禁止：吞流量的 AI 训练 / 大模型爬虫（这些都遵守 robots，禁了确实省流量）
+User-agent: GPTBot
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: claude-web
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: facebook-external
+Disallow: /
+
+User-agent: AI2Bot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+# 其余所有爬虫（含平台审核、Google/Bing/百度/搜狗/360/字节等搜索引擎）默认放行
+User-agent: *
+Allow: /
+
+Sitemap: https://www.zyxfwq.online/sitemap.xml

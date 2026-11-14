@@ -1,0 +1,16 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: quanrule-website
+Upstream-Contact: QuanRule Contributors <contributors@zyxfwq.online>
+Source: https://github.com/zyxgit09/quanrule-website
+
+Files: vercel.json
+ a33f6d4bbab51aa3cbcfc54cf2de595a.txt
+ assets/hero.jpg
+ assets/blocks.jpg
+Copyright: 2026 QuanRule Contributors
+License: Apache-2.0
+
+Files: assets/sdg/*
+Copyright: United Nations
+License: LicenseRef-UN-SDG-Guidelines
+Comment: SDG 图标与色轮版权归联合国所有，按联合国《可持续发展目标标识使用指南》用于声明支持，不代表联合国背书。

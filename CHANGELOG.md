@@ -1,3 +1,8 @@
+<!--
+SPDX-FileCopyrightText: 2026 QuanRule Contributors
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # 变更日志（Changelog）
 
 本项目的显著变更记录在此。版本号遵循[语义化版本（SemVer）](https://semver.org/lang/zh-CN/)，并以 Git 标签（tag）标识每次发布。

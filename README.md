@@ -1,3 +1,8 @@
+<!--
+SPDX-FileCopyrightText: 2026 QuanRule Contributors
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # QuanRule Website（全规则服务器官网）
 
 全规则（QuanRule）Minecraft 服务器的官方网站源码。纯静态网页 + 云后端，采用 Minecraft 像素风格，支持手机端自适应。

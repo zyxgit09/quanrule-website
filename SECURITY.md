@@ -1,3 +1,8 @@
+<!--
+SPDX-FileCopyrightText: 2026 QuanRule Contributors
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # 安全策略（Security Policy）
 
 ## 报告漏洞

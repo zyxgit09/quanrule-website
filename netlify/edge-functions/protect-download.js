@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 QuanRule Contributors
+// SPDX-License-Identifier: Apache-2.0
+
 // 全规则服务器 · 启动器下载保护（Netlify Edge Function，Deno 运行时）
 //
 // 拦截 /downloads/QuanRuleLauncher.exe：

@@ -1,9 +1,31 @@
 <!DOCTYPE html>
+<!--
+SPDX-FileCopyrightText: 2026 QuanRule Contributors
+SPDX-License-Identifier: Apache-2.0
+-->
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>全规则服务器 - Minecraft</title>
+<meta name="description" content="全规则服务器官网：Minecraft 全规则生存服务器，地址 mc.zyxfwq.online，提供免安装启动器下载、玩法说明、公告与玩家认证。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://www.zyxfwq.online/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="全规则服务器">
+<meta property="og:title" content="全规则服务器 - Minecraft">
+<meta property="og:description" content="Minecraft 全规则生存服务器，地址 mc.zyxfwq.online，免安装启动器下载与玩法说明。">
+<meta property="og:url" content="https://www.zyxfwq.online/">
+<meta property="og:image" content="https://www.zyxfwq.online/assets/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="全规则服务器 - Minecraft">
+<meta name="twitter:description" content="Minecraft 全规则生存服务器，地址 mc.zyxfwq.online。">
+<meta name="twitter:image" content="https://www.zyxfwq.online/assets/hero.jpg">
+<!-- 站长平台验证：从各平台复制验证码后填入对应行，取消注释即可
+<meta name="msvalidate.01" content="BING_验证码">
+<meta name="google-site-verification" content="GOOGLE_验证码">
+<meta name="baidu-site-verification" content="BAIDU_验证码">
+-->
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Ctext%20y%3D%27.9em%27%20font-size%3D%2790%27%3E%E2%9B%8F%3C%2Ftext%3E%3C%2Fsvg%3E">
 <style>
 /* ===== 像素字体（中文 Zpix） ===== */
@@ -139,6 +161,23 @@ h2::before{content:'';width:14px;height:14px;background:var(--grass);border:2px 
 .radio-row input{width:auto;}
 footer{border-top:4px solid var(--line);padding:26px 0;text-align:center;color:#9a938a;font-size:13px;margin-top:20px;}
 
+/* ===== 认证与支持 ===== */
+.settings-section{display:grid;grid-template-columns:1fr;gap:22px;}
+.settings-section > h2{grid-column:1/-1;}
+@media (min-width:960px){
+  .settings-section{grid-template-columns:minmax(0,0.92fr) minmax(0,1.08fr);align-items:start;}
+}
+.settings-cert > h2{font-size:20px;margin-bottom:14px;}
+.badge-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+.settings-cert .badge-grid{grid-template-columns:1fr;}
+.badge-card{display:flex;gap:14px;align-items:flex-start;padding:16px;}
+.badge-card img,.badge-card svg{flex:0 0 auto;max-height:58px;width:auto;max-width:120px;object-fit:contain;image-rendering:auto;}
+.badge-card h3{font-size:15px;margin-bottom:6px;color:#f3efe9;}
+.badge-card p{font-size:13px;line-height:1.65;color:#cfc8be;}
+.badge-link{margin-top:8px;}
+.badge-link a{font-size:13px;}
+.badge-note{font-size:12px;color:#8a837b;margin-top:14px;line-height:1.6;}
+
 /* ===== 响应式：移动端保持结构，仅做适配美化 ===== */
 @media (max-width:860px){
   .grid.cols-4{grid-template-columns:repeat(2,1fr);}
@@ -246,7 +285,7 @@ footer{border-top:4px solid var(--line);padding:26px 0;text-align:center;color:#
 
   <!-- ===== 设置 ===== -->
   <div class="page" id="page-settings">
-    <section>
+    <section class="settings-section">
       <h2>设置</h2>
       <div class="mc-box" style="padding:24px;max-width:520px;">
         <h3 style="color:var(--diamond);margin-bottom:14px;">账号</h3>
@@ -261,6 +300,88 @@ footer{border-top:4px solid var(--line);padding:26px 0;text-align:center;color:#
           <h3 style="color:var(--diamond);margin-bottom:6px;">🔒 安全证书</h3>
           <p style="font-size:14px;color:#b9b2a8;">查看网站安全证书信息</p>
         </div>
+      </div>
+      <div class="settings-cert">
+<h2>认证与支持</h2>
+    <div class="badge-grid">
+
+      <div class="mc-box badge-card">
+        <img src="https://www.bestpractices.dev/projects/16687/badge" alt="OpenSSF Best Practices passing" loading="lazy">
+        <div>
+          <h3>OpenSSF 最佳实践</h3>
+          <p>本项目通过 OpenSSF（开源安全基金会）最佳实践认证，获得 passing 级徽章，状态可在官方项目页实时查验。</p>
+          <p class="badge-link"><a href="https://www.bestpractices.dev/projects/16687" target="_blank" rel="noopener">查看认证记录</a></p>
+        </div>
+      </div>
+
+      <div class="mc-box badge-card">
+        <img src="assets/badges/w3c-html5.png" alt="W3C HTML5" loading="lazy">
+        <div>
+          <h3>W3C HTML5 验证</h3>
+          <p>本站页面通过 W3C HTML5 标记校验，无错误，符合 W3C 公布的 HTML5 规范。</p>
+          <p class="badge-link"><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww.zyxfwq.online%2F" target="_blank" rel="noopener">在线校验结果</a></p>
+        </div>
+      </div>
+
+      <div class="mc-box badge-card">
+        <svg viewBox="0 0 160 96" width="100" height="60" role="img" aria-label="SSL Labs A plus">
+          <rect x="4" y="4" width="152" height="88" rx="8" fill="#0b3d2e"></rect>
+          <text x="80" y="32" text-anchor="middle" fill="#9fe3c2" font-size="11" font-family="sans-serif">QUALYS SSL LABS</text>
+          <text x="80" y="70" text-anchor="middle" fill="#ffffff" font-size="34" font-weight="700" font-family="sans-serif">A+</text>
+          <text x="80" y="84" text-anchor="middle" fill="#9fe3c2" font-size="10" font-family="sans-serif">SSL SERVER RATING</text>
+        </svg>
+        <div>
+          <h3>SSL Labs A+ 评级</h3>
+          <p>本站 TLS 配置经 Qualys SSL Labs 检测，协议、密钥交换与证书链全部评为最高等级 A+。</p>
+          <p class="badge-link"><a href="https://www.ssllabs.com/ssltest/analyze.html?d=www.zyxfwq.online" target="_blank" rel="noopener">查看检测报告</a></p>
+        </div>
+      </div>
+
+      <div class="mc-box badge-card">
+        <img src="https://github.com/zyxgit09/quanrule-website/actions/workflows/test.yml/badge.svg" alt="GitHub Actions 测试状态" loading="lazy">
+        <div>
+          <h3>自动化测试</h3>
+          <p>每次代码提交都会自动运行站点测试套件，5 项检查全部通过后才保留改动，徽章状态随构建实时更新。</p>
+          <p class="badge-link"><a href="https://github.com/zyxgit09/quanrule-website/actions" target="_blank" rel="noopener">查看构建记录</a></p>
+        </div>
+      </div>
+
+      <div class="mc-box badge-card">
+        <img src="assets/sdg/sdg_wheel.svg" alt="可持续发展目标色轮" loading="lazy">
+        <div>
+          <h3>支持联合国可持续发展目标</h3>
+          <p>17 色色轮代表联合国《2030 年可持续发展议程》提出的全部 17 项可持续发展目标。本站支持这些目标的全部理念，并愿意在自身能力范围内促进其实现——包括消除贫困、保护地球、让所有人享有和平与繁荣。</p>
+        </div>
+      </div>
+
+      <div class="mc-box badge-card">
+        <img src="assets/sdg/goal_17.png" alt="目标17 促进目标实现的伙伴关系" loading="lazy">
+        <div>
+          <h3>促进目标实现的伙伴关系</h3>
+          <p>这是 17 项目标中的最后一项（目标 17）。它强调通过政府、企业、社会组织与个人之间的合作来推动全部目标落地。本站认同这一理念，欢迎与各方就开源、教育与公益方向展开合作。</p>
+        </div>
+      </div>
+
+      <div class="mc-box badge-card">
+        <img src="https://img.shields.io/github/license/zyxgit09/quanrule-website" alt="许可证 Apache-2.0" loading="lazy">
+        <div>
+          <h3>开源许可证</h3>
+          <p>本站源码以 Apache License 2.0 公开，允许自由使用、修改与分发，并附带专利授权条款。</p>
+          <p class="badge-link"><a href="https://github.com/zyxgit09/quanrule-website/blob/main/LICENSE" target="_blank" rel="noopener">查看许可证全文</a></p>
+        </div>
+      </div>
+
+      <div class="mc-box badge-card">
+        <img src="https://img.shields.io/github/v/tag/zyxgit09/quanrule-website" alt="版本 v1.0.0" loading="lazy">
+        <div>
+          <h3>版本发布</h3>
+          <p>本站按语义化版本管理，当前版本 v1.0.0，每次变更记录在变更日志中。</p>
+          <p class="badge-link"><a href="https://github.com/zyxgit09/quanrule-website/blob/main/CHANGELOG.md" target="_blank" rel="noopener">查看变更日志</a></p>
+        </div>
+      </div>
+
+    </div>
+    <p class="badge-note">本站对联合国可持续发展目标的支持为自发表达，不代表联合国及其任何机构的背书、认证或合作关系。</p>
       </div>
     </section>
   </div>

@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 QuanRule Contributors
+# SPDX-License-Identifier: Apache-2.0
+
 -- ============================================================
 -- 增量脚本：让玩家名称在全服唯一，保证福利/私信能准确锁定到人
 -- 前提：已跑过 schema.sql。在 Supabase 的 SQL Editor 里整段运行即可。

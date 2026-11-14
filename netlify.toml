@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 QuanRule Contributors
+# SPDX-License-Identifier: Apache-2.0
+
 # Netlify 配置（全规则服务器官网）
 
 # 把 /sb/* 路由到反向代理 Edge Function（netlify/edge-functions/sb.js）
@@ -28,3 +31,7 @@
   [headers.values]
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+    Strict-Transport-Security = "max-age=31536000"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https: wss:; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'"

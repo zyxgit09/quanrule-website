@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 QuanRule Contributors
+// SPDX-License-Identifier: Apache-2.0
+
 // ============================================================
 // 全规则服务器官网 · Supabase 配置
 //

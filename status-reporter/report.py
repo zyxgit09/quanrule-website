@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 QuanRule Contributors
+# SPDX-License-Identifier: Apache-2.0
+
 # -*- coding: utf-8 -*-
 """
 全规则服务器 · 状态上报（零第三方依赖，只用 Python 标准库）

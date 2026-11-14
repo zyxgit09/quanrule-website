@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 QuanRule Contributors
+# SPDX-License-Identifier: Apache-2.0
+
 -- ============================================================
 -- 全规则服务器官网 · Supabase 数据库建表脚本
 -- 使用方法：在 Supabase 控制台左侧 SQL Editor 里整段粘贴运行

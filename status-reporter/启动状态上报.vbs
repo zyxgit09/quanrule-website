@@ -1,3 +1,6 @@
+' SPDX-FileCopyrightText: 2026 QuanRule Contributors
+' SPDX-License-Identifier: Apache-2.0
+
 ' 全规则服务器 · 状态上报静默启动器（无黑窗口）
 pythonw = "C:\Users\Lenovo\AppData\Local\Programs\Python\Python312\pythonw.exe"
 Set fso = CreateObject("Scripting.FileSystemObject")

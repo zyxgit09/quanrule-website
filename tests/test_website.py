@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 QuanRule Contributors
+# SPDX-License-Identifier: Apache-2.0
+
 """
 quanrule-website 自动化测试套件（无需第三方依赖，Python 标准库）。
 
@@ -49,6 +52,10 @@ def test_assets_referenced_exist():
     refs = re.findall(r'(?:src|href)\s*=\s*["\'](?!https?://|#|/|mailto:|data:)([^"\']+)["\']', html)
     for ref in refs:
         ref = ref.split("?")[0]
+        if ref.startswith("downloads/"):
+            # 启动器本体约 76MB，不进 Git，改由 GitHub Releases 分发，
+            # 因此 CI 的干净检出中不存在，跳过这一前缀的检查。
+            continue
         assert os.path.exists(path(ref)), "引用的本地资源不存在: " + ref
 
 

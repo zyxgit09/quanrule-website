@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 QuanRule Contributors
+# SPDX-License-Identifier: Apache-2.0
+
 -- ============================================================
 -- 增量脚本：服务器状态表（让服务端电脑主动上报，最准）
 -- 如果你已经跑过 schema.sql，只需要在 Supabase 的 SQL Editor 里

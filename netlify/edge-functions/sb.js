@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 QuanRule Contributors
+// SPDX-License-Identifier: Apache-2.0
+
 // 全规则服务器 · Supabase 反向代理（Netlify Edge Function，Deno 运行时）
 //
 // 浏览器只访问同源的 /sb/*（域名 www.zyxfwq.online，未被封锁），由本函数在
